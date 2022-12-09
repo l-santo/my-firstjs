@@ -1,1 +1,17 @@
-<p>person works!</p>
+<input type="text" [(ngModel)]='name'>
+<br>
+<button (click)="showText()">Show Text</button>
+<p *ngIf="thereAreText; else sinTexto">
+    Texto ingresado: {{name}}
+</p>
+<ng-template #sinTexto>
+    <p>
+        Nada que mostrar.
+    </p>
+</ng-template>
+<div *ngFor="let person of peopleList"> // Recorre toda la lista de peopleList y añade a person
+    {{person.name}} {{person.lastName}} // Interpolación para acceder al nombre, apellido
+</div>
+
+
+
