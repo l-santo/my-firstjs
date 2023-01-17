@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonModel } from '../model/person.model';
+import { PersonModel } from '../../model/person.model';
 
 @Component({
   selector: 'app-person',
@@ -11,8 +11,7 @@ export class PersonComponent implements OnInit {
   thereAreText = false;
 
   peopleList: PersonModel[] = [
-    new PersonModel("Juan", "Perez", 22),
-    new PersonModel("Andres", "Hernandez", 37)
+    new PersonModel("Codigo", "N.- 001", 1)
   ]
   showText() {
     console.log(this.name);

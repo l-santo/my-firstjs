@@ -1,0 +1,19 @@
+<input type="text" [(ngModel)]='name'>
+<br>
+<button (click)="showText()">Show Text</button>
+<p *ngIf="thereAreText; else sinTexto">
+    Texto ingresado: {{name}}
+</p>
+<ng-template #sinTexto>
+    <p>
+        Censo de Poblacion y Vivienda 2022
+    </p>
+</ng-template>
+<div *ngFor="let person of peopleList">
+     <!-- // Recorre toda la lista de peopleList y añade a person -->
+    {{person.name}} {{person.lastName}} 
+    <!-- // Interpolación para acceder al nombre, apellido -->
+</div>
+
+
+
